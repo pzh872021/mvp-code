@@ -1,14 +1,23 @@
 package com.mvp.code;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.mvp.base.BasicActivity;
+import com.mvp.base.XInjectPresenter;
+import com.mvp.code.databinding.ActivityMainBinding;
+
+public class MainActivity extends BasicActivity<ActivityMainBinding> {
+
+    @XInjectPresenter
+    MainPresenter mMainPresenter;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public int getLayoutId() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void initViews(Bundle savedInstanceState) {
+
     }
 }
