@@ -1,12 +1,12 @@
-package com.mvp.code;
+package com.mvp.demo;
 
 import android.os.Bundle;
 
 import com.mvp.base.BasicActivity;
 import com.mvp.base.XInjectPresenter;
-import com.mvp.code.databinding.ActivityMainBinding;
+import com.mvp.demo.databinding.ActivityMainBinding;
 
-public class MainActivity extends BasicActivity<ActivityMainBinding> {
+public class MainActivity extends BasicActivity<ActivityMainBinding> implements MainView {
 
     @XInjectPresenter
     MainPresenter mMainPresenter;

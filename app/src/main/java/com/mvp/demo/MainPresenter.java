@@ -1,4 +1,4 @@
-package com.mvp.code;
+package com.mvp.demo;
 
 import com.mvp.base.BasicPresenter;
 

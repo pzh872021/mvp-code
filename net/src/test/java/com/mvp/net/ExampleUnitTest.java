@@ -1,4 +1,4 @@
-package com.mvp.code;
+package com.mvp.net;
 
 import org.junit.Test;
 

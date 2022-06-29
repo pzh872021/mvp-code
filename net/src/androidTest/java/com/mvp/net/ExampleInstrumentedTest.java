@@ -1,4 +1,4 @@
-package com.mvp.code;
+package com.mvp.net;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.mvp.code", appContext.getPackageName());
+        assertEquals("com.mvp.net.test", appContext.getPackageName());
     }
 }

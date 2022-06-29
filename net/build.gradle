@@ -1,16 +1,13 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
 }
 
 android {
     compileSdk rootProject.ext.compileSdk
 
     defaultConfig {
-        applicationId "com.mvp.code"
         minSdk rootProject.ext.minSdk
         targetSdk rootProject.ext.targetSdk
-        versionCode rootProject.ext.versionCode
-        versionName rootProject.ext.versionName
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -29,10 +26,7 @@ android {
 
 dependencies {
 
-    implementation rootProject.ext.appcompat
-    implementation rootProject.ext.material
-    implementation project(path: ':mvp')
-    implementation project(path: ':net')
+    implementation rootProject.ext.okhttp
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
