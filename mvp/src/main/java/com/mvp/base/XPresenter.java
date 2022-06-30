@@ -23,7 +23,7 @@ abstract class XPresenter<V extends XView> {
 
    void detach() {
         mReferenceView.clear();
-        mProxyView.cancelNetWork();
+        mProxyView.cancelHandler();
         mReferenceView = null;
     }
 

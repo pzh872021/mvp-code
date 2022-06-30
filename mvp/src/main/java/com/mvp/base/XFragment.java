@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -83,7 +84,7 @@ abstract class XFragment<B extends ViewDataBinding> extends Fragment implements 
 
 
     @Override
-    public void cancelNetWork() {
+    public void cancelHandler() {
 
     }
 
@@ -107,5 +108,20 @@ abstract class XFragment<B extends ViewDataBinding> extends Fragment implements 
     public void onDestroy() {
         super.onDestroy();
         mProxyActivity.unbindPresenter();
+    }
+
+    @Override
+    public void toastLong(String msg) {
+        Toast.makeText(getAtyContext(), msg, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void toastShort(String msg) {
+        Toast.makeText(getAtyContext(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showLoading(String msg) {
+
     }
 }

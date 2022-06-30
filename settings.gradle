@@ -16,3 +16,5 @@ rootProject.name = "MvpCode"
 include ':app'
 include ':mvp'
 include ':net'
+include ':widget'
+include ':Kit'

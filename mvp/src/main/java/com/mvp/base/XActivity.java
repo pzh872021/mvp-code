@@ -3,6 +3,7 @@ package com.mvp.base;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -52,7 +53,7 @@ abstract class XActivity<B extends ViewDataBinding> extends AppCompatActivity im
     }
 
     @Override
-    public void cancelNetWork() {
+    public void cancelHandler() {
 
     }
 
@@ -90,5 +91,20 @@ abstract class XActivity<B extends ViewDataBinding> extends AppCompatActivity im
                 handleResult(f, requestCode, resultCode, data);
             }
         }
+    }
+
+    @Override
+    public void toastLong(String msg) {
+        Toast.makeText(getAtyContext(), msg, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void toastShort(String msg) {
+        Toast.makeText(getAtyContext(), msg, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void showLoading(String msg) {
+
     }
 }
